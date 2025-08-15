@@ -3,6 +3,138 @@
  * You should not edit it manually or your changes might be overwritten.
  */
 
-const deployedContracts = {} as const;
+const deployedContracts = {
+  devnet: {
+    Coffee: {
+      address:
+        "0x3e4f7b3450903c4f52d49a0b7c784b393412e21a1d356a933aa313bb98157f4",
+      abi: [
+        {
+          type: "impl",
+          name: "CoffeeImpl",
+          interface_name: "contracts::Coffee::ICoffee",
+        },
+        {
+          type: "struct",
+          name: "core::integer::u256",
+          members: [
+            {
+              name: "low",
+              type: "core::integer::u128",
+            },
+            {
+              name: "high",
+              type: "core::integer::u128",
+            },
+          ],
+        },
+        {
+          type: "interface",
+          name: "contracts::Coffee::ICoffee",
+          items: [
+            {
+              type: "function",
+              name: "buy_coffee",
+              inputs: [
+                {
+                  name: "message",
+                  type: "core::felt252",
+                },
+              ],
+              outputs: [],
+              state_mutability: "external",
+            },
+            {
+              type: "function",
+              name: "withdraw",
+              inputs: [],
+              outputs: [],
+              state_mutability: "external",
+            },
+            {
+              type: "function",
+              name: "get_total_coffees",
+              inputs: [],
+              outputs: [
+                {
+                  type: "core::integer::u256",
+                },
+              ],
+              state_mutability: "view",
+            },
+            {
+              type: "function",
+              name: "get_creator",
+              inputs: [],
+              outputs: [
+                {
+                  type: "core::starknet::contract_address::ContractAddress",
+                },
+              ],
+              state_mutability: "view",
+            },
+            {
+              type: "function",
+              name: "get_coffee_price",
+              inputs: [],
+              outputs: [
+                {
+                  type: "core::integer::u256",
+                },
+              ],
+              state_mutability: "view",
+            },
+          ],
+        },
+        {
+          type: "constructor",
+          name: "constructor",
+          inputs: [
+            {
+              name: "creator",
+              type: "core::starknet::contract_address::ContractAddress",
+            },
+          ],
+        },
+        {
+          type: "event",
+          name: "contracts::Coffee::Coffee::CoffeeBought",
+          kind: "struct",
+          members: [
+            {
+              name: "buyer",
+              type: "core::starknet::contract_address::ContractAddress",
+              kind: "data",
+            },
+            {
+              name: "message",
+              type: "core::felt252",
+              kind: "data",
+            },
+            {
+              name: "amount",
+              type: "core::integer::u256",
+              kind: "data",
+            },
+          ],
+        },
+        {
+          type: "event",
+          name: "contracts::Coffee::Coffee::Event",
+          kind: "enum",
+          variants: [
+            {
+              name: "CoffeeBought",
+              type: "contracts::Coffee::Coffee::CoffeeBought",
+              kind: "nested",
+            },
+          ],
+        },
+      ],
+      classHash:
+        "0x708f2d87c78e2d5b16cc8d2a4fedc3489c9d3b89c537c4b6b6719bb16987afe",
+    },
+  },
+} as const;
 
 export default deployedContracts;

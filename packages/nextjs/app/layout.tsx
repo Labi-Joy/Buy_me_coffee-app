@@ -4,8 +4,8 @@ import "~~/styles/globals.css";
 import { ThemeProvider } from "~~/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "Scaffold-Stark",
-  description: "Fast track your starknet journey",
+  title: "Buy Me a Coffee ☕ - Support Labi Dev",
+  description: "Support my work by buying me a virtual coffee! Powered by Starknet",
   icons: "/logo.ico",
 };
 
