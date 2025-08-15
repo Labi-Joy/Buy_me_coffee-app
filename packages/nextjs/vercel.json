@@ -1,14 +1,5 @@
 {
+  "buildCommand": "yarn build",
   "installCommand": "yarn install",
-  "buildCommand": "cd ../.. && yarn workspace @ss-2/nextjs build",
-  "outputDirectory": "packages/nextjs/.next",
-  "framework": "nextjs",
-  "env": {
-    "NEXT_PUBLIC_DEPLOYMENT_ENV": "production",
-    "NEXT_PUBLIC_SEPOLIA_PROVIDER_URL": "https://starknet-sepolia.public.blastapi.io/rpc/v0_8",
-    "NEXT_PUBLIC_MAINNET_PROVIDER_URL": "https://starknet-mainnet.public.blastapi.io/rpc/v0_8",
-    "NEXT_PUBLIC_APP_NAME": "Buy Me a Coffee ☕",
-    "NEXT_PUBLIC_APP_DESCRIPTION": "Support Labi Dev with virtual coffee",
-    "NEXT_PUBLIC_CREATOR_NAME": "Labi Dev"
-  }
+  "framework": "nextjs"
 }
