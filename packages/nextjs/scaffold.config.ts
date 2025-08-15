@@ -9,8 +9,12 @@ export type ScaffoldConfig = {
   autoConnectTTL: number;
 };
 
+// Determine target network based on environment
+const isProduction = process.env.NEXT_PUBLIC_DEPLOYMENT_ENV === 'production';
+const targetNetwork = isProduction ? chains.sepolia : chains.devnet;
+
 const scaffoldConfig = {
-  targetNetworks: [chains.devnet],
+  targetNetworks: [targetNetwork],
   // Only show the Burner Wallet when running on devnet
   onlyLocalBurnerWallet: false,
   // The interval at which your front-end polls the RPC servers for new data
