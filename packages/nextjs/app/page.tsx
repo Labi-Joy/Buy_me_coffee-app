@@ -323,7 +323,7 @@ const Home = () => {
             <div className="text-center mt-6 space-y-2">
               <div className="text-2xl animate-pulse">🤎</div>
               <p className="text-sm text-amber-600 italic">
-                "Good ideas start with great coffee!"
+                &quot;Good ideas start with great coffee!&quot;
               </p>
             </div>
           </div>
